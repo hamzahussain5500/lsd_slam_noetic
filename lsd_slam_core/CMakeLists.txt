@@ -32,10 +32,10 @@ include_directories(${PROJECT_SOURCE_DIR}/thirdparty/Sophus/sophus)
 
 # FabMap
 # uncomment this part to enable fabmap
-#add_subdirectory(${PROJECT_SOURCE_DIR}/thirdparty/openFabMap)
-#include_directories(${PROJECT_SOURCE_DIR}/thirdparty/openFabMap/include)
-#add_definitions("-DHAVE_FABMAP")
-#set(FABMAP_LIB openFABMAP )
+add_subdirectory(${PROJECT_SOURCE_DIR}/thirdparty/openFabMap)
+include_directories(${PROJECT_SOURCE_DIR}/thirdparty/openFabMap/include)
+add_definitions("-DHAVE_FABMAP")
+set(FABMAP_LIB openFABMAP )
 
 generate_dynamic_reconfigure_options(
   cfg/LSDDebugParams.cfg
